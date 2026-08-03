@@ -1,0 +1,76 @@
+.enquiry-card{
+    width:100%;
+    max-width:420px;
+    background:#fff;
+    padding:36px;
+    border-radius:16px;
+    border:1px solid var(--border);
+    box-shadow:var(--shadow);
+}
+
+.enquiry-card h2{
+    font-size:28px;
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+.enquiry-card p{
+    color:var(--text);
+    margin-bottom:28px;
+    line-height:1.7;
+}
+
+.enquiry-card form{
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+}
+
+.form-group{
+    display:flex;
+    flex-direction:column;
+}
+
+.form-group label{
+    margin-bottom:8px;
+    font-size:14px;
+    font-weight:600;
+    color:var(--heading);
+}
+
+.form-group input,
+.form-group select{
+    width:100%;
+    height:52px;
+    padding:0 16px;
+    border:1px solid var(--border);
+    border-radius:12px;
+    background:#fff;
+    font-size:15px;
+    color:var(--heading);
+    outline:none;
+    transition:.25s;
+}
+
+.form-group input:focus,
+.form-group select:focus{
+    border-color:var(--primary);
+}
+
+.enquiry-card .btn{
+    width:100%;
+    margin-top:10px;
+}
+
+@media(max-width:768px){
+
+.enquiry-card{
+max-width:100%;
+padding:28px;
+}
+
+.enquiry-card h2{
+font-size:24px;
+}
+
+}
