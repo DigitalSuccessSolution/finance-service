@@ -6,16 +6,14 @@
   overflow-x: hidden;
 }
 
-/* Gold Gradient Text & Elements */
+/* Gold Accent Text & Elements */
 .gold-gradient-text {
-  background: linear-gradient(135deg, #E2B755 0%, #C89B3C 50%, #9B701D 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: rgba(162, 123, 44, 0.9);
   display: inline-block;
 }
 
 .gold {
-  color: #C89B3C !important;
+  color: rgba(162, 123, 44, 0.88) !important;
 }
 
 .green {
@@ -33,9 +31,9 @@
 
 .section-pill-tag {
   display: inline-block;
-  background: #FFF8EA;
-  color: #C89B3C;
-  border: 1px solid rgba(200, 155, 60, 0.3);
+  background: rgba(176, 134, 52, 0.08);
+  color: rgba(154, 116, 40, 0.9);
+  border: 1px solid rgba(176, 134, 52, 0.2);
   padding: 6px 16px;
   border-radius: 30px;
   font-size: 12px;
@@ -60,12 +58,31 @@
   margin: 0 auto;
 }
 
+/* Scroll Reveal Animations */
+.reveal-on-scroll {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-on-scroll.is-revealed {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger-delay-1 { transition-delay: 0.1s; }
+.stagger-delay-2 { transition-delay: 0.2s; }
+.stagger-delay-3 { transition-delay: 0.3s; }
+.stagger-delay-4 { transition-delay: 0.4s; }
+.stagger-delay-5 { transition-delay: 0.5s; }
+
 /* ----------------------------------------------------
    1. HERO SECTION
 ---------------------------------------------------- */
 .pl-hero {
-  padding: 70px 0 90px;
-  background: radial-gradient(circle at 80% 20%, rgba(200, 155, 60, 0.06) 0%, rgba(248, 249, 251, 0) 60%), #F8F9FB;
+  padding: 30px 0 60px;
+  background: radial-gradient(circle at 80% 20%, rgba(176, 134, 52, 0.03) 0%, rgba(248, 249, 251, 0) 60%), #F8F9FB;
 }
 
 .pl-hero-grid {
@@ -126,8 +143,8 @@
 }
 
 .pl-eligibility-form:focus-within {
-  border-color: #C89B3C;
-  box-shadow: 0 12px 35px rgba(200, 155, 60, 0.2);
+  border-color: rgba(176, 134, 52, 0.5);
+  box-shadow: 0 12px 35px rgba(176, 134, 52, 0.1);
 }
 
 .input-group {
@@ -206,7 +223,7 @@
 }
 
 .check-badge-item .check-icon {
-  color: #C89B3C;
+  color: rgba(162, 123, 44, 0.85);
 }
 
 /* Visual Right Frame */
@@ -366,21 +383,21 @@
 .category-card:hover {
   transform: translateY(-6px);
   background: #FFFFFF;
-  border-color: #C89B3C;
+  border-color: rgba(176, 134, 52, 0.5);
   box-shadow: 0 16px 36px rgba(13, 36, 71, 0.08);
 }
 
 .category-card.active,
 .category-card.popular-card {
   background: #FFFFFF;
-  border: 2px solid #C89B3C;
-  box-shadow: 0 16px 36px rgba(200, 155, 60, 0.15);
+  border: 2px solid rgba(176, 134, 52, 0.4);
+  box-shadow: 0 12px 28px rgba(176, 134, 52, 0.08);
 }
 
 .popular-badge {
   position: absolute;
   top: -12px;
-  background: linear-gradient(135deg, #E2B755, #C89B3C);
+  background: rgba(154, 116, 40, 0.88);
   color: #FFFFFF;
   font-size: 11px;
   font-weight: 700;
@@ -389,13 +406,13 @@
   display: flex;
   align-items: center;
   gap: 4px;
-  box-shadow: 0 4px 10px rgba(200, 155, 60, 0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .cat-icon-box {
   width: 58px;
   height: 58px;
-  background: #FFF8EA;
+  background: rgba(176, 134, 52, 0.08);
   border-radius: 16px;
   display: flex;
   align-items: center;
@@ -410,7 +427,7 @@
 }
 
 .cat-icon {
-  color: #C89B3C;
+  color: rgba(162, 123, 44, 0.88);
 }
 
 .category-card:hover .cat-icon {
@@ -435,7 +452,7 @@
 .cat-rate {
   font-size: 13px;
   font-weight: 700;
-  color: #C89B3C;
+  color: rgba(154, 116, 40, 0.9);
   margin-bottom: 16px;
 }
 
@@ -506,7 +523,7 @@
 .step-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 16px 36px rgba(13, 36, 71, 0.08);
-  border-color: #C89B3C;
+  border-color: rgba(176, 134, 52, 0.4);
 }
 
 .step-number-badge {
@@ -525,8 +542,8 @@
   width: 68px;
   height: 68px;
   border-radius: 50%;
-  background: #FFF8EA;
-  border: 2px solid rgba(200, 155, 60, 0.3);
+  background: rgba(176, 134, 52, 0.08);
+  border: 1px solid rgba(176, 134, 52, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -534,7 +551,7 @@
 }
 
 .step-icon {
-  color: #C89B3C;
+  color: rgba(162, 123, 44, 0.88);
 }
 
 .step-card h3 {
@@ -551,7 +568,7 @@
 }
 
 .step-connector-dots {
-  color: #C89B3C;
+  color: rgba(176, 134, 52, 0.6);
   font-size: 18px;
   letter-spacing: 6px;
   opacity: 0.5;
@@ -584,7 +601,7 @@
 
 .why-card:hover {
   background: #FFFFFF;
-  border-color: #C89B3C;
+  border-color: rgba(176, 134, 52, 0.4);
   box-shadow: 0 14px 35px rgba(13, 36, 71, 0.06);
   transform: translateY(-4px);
 }
@@ -592,7 +609,7 @@
 .why-icon-box {
   width: 52px;
   height: 52px;
-  background: #FFF8EA;
+  background: rgba(176, 134, 52, 0.08);
   border-radius: 14px;
   display: flex;
   align-items: center;
@@ -601,7 +618,7 @@
 }
 
 .why-icon {
-  color: #C89B3C;
+  color: rgba(162, 123, 44, 0.88);
 }
 
 .why-card h3 {
@@ -645,7 +662,7 @@
 
 .stat-subtitle {
   font-size: 13px;
-  color: #C89B3C;
+  color: rgba(176, 134, 52, 0.85);
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -680,8 +697,8 @@
 }
 
 .star-filled {
-  color: #F59E0B;
-  fill: #F59E0B;
+  color: rgba(210, 160, 50, 0.75);
+  fill: rgba(210, 160, 50, 0.75);
 }
 
 .reviews-count {
@@ -743,12 +760,12 @@
 }
 
 .testimonial-card.active-slide {
-  border-color: #C89B3C;
-  box-shadow: 0 12px 30px rgba(200, 155, 60, 0.15);
+  border-color: rgba(176, 134, 52, 0.4);
+  box-shadow: 0 12px 30px rgba(176, 134, 52, 0.08);
 }
 
 .quote-icon {
-  color: #C89B3C;
+  color: rgba(176, 134, 52, 0.5);
   opacity: 0.5;
   margin-bottom: 12px;
 }
@@ -772,7 +789,7 @@
   height: 44px;
   border-radius: 50%;
   object-fit: cover;
-  border: 2px solid #C89B3C;
+  border: 2px solid rgba(176, 134, 52, 0.4);
 }
 
 .author-info h4 {
@@ -932,7 +949,7 @@
 }
 
 .bar-interest {
-  background: #C89B3C;
+  background: rgba(162, 123, 44, 0.75);
 }
 
 .result-sub-grid {
@@ -961,7 +978,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(135deg, #DFB75A 0%, #C89B3C 100%);
+  background: #0D2447;
   color: #FFFFFF;
   border: none;
   padding: 16px 36px;
@@ -969,13 +986,14 @@
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(200, 155, 60, 0.35);
+  box-shadow: 0 8px 20px rgba(13, 36, 71, 0.2);
   transition: all 0.3s ease;
 }
 
 .calc-now-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 30px rgba(200, 155, 60, 0.45);
+  background: #153B69;
+  box-shadow: 0 12px 25px rgba(13, 36, 71, 0.25);
 }
 
 /* ----------------------------------------------------
@@ -1019,7 +1037,7 @@
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  background: linear-gradient(135deg, #DFB75A 0%, #C89B3C 100%);
+  background: rgba(162, 123, 44, 0.9);
   color: #FFFFFF;
   border: none;
   padding: 16px 36px;
@@ -1027,7 +1045,7 @@
   font-size: 16px;
   font-weight: 700;
   cursor: pointer;
-  box-shadow: 0 10px 25px rgba(200, 155, 60, 0.4);
+  box-shadow: 0 8px 20px rgba(162, 123, 44, 0.25);
   transition: all 0.3s ease;
 
   margin-bottom: 24px;
@@ -1035,7 +1053,8 @@
 
 .cta-gold-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 14px 30px rgba(200, 155, 60, 0.55);
+  background: rgba(154, 116, 40, 0.95);
+  box-shadow: 0 12px 25px rgba(162, 123, 44, 0.35);
 }
 
 .cta-mini-features {
@@ -1093,8 +1112,8 @@
 }
 
 .faq-accordion-item.open {
-  border-color: #C89B3C;
-  box-shadow: 0 10px 25px rgba(200, 155, 60, 0.08);
+  border-color: rgba(176, 134, 52, 0.4);
+  box-shadow: 0 10px 25px rgba(176, 134, 52, 0.06);
 }
 
 .faq-question-btn {
@@ -1125,8 +1144,8 @@
 }
 
 .faq-accordion-item.open .faq-toggle-icon {
-  background: #FFF8EA;
-  color: #C89B3C;
+  background: rgba(176, 134, 52, 0.08);
+  color: rgba(154, 116, 40, 0.9);
 }
 
 .faq-answer-content {
@@ -1241,7 +1260,7 @@
 
 .modal-subtitle {
   font-size: 13px;
-  color: #C89B3C;
+  color: rgba(162, 123, 44, 0.9);
   font-weight: 600;
   margin: 0;
 }
@@ -1340,9 +1359,9 @@
 }
 
 .radio-box.selected {
-  border-color: #C89B3C;
-  background: #FFF8EA;
-  color: #C89B3C;
+  border-color: rgba(176, 134, 52, 0.5);
+  background: rgba(176, 134, 52, 0.08);
+  color: rgba(154, 116, 40, 0.9);
 }
 
 .modal-submit-btn {

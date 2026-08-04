@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import HeroSection from "../components/personal-loan/HeroSection";
 import LoanCategories from "../components/personal-loan/LoanCategories";
 import HowItWorks from "../components/personal-loan/HowItWorks";
@@ -15,6 +15,28 @@ const PersonalLoan = () => {
   const [modalOpen, setModalOpen] = useState(false);
   const [userMobile, setUserMobile] = useState("");
   const [selectedLoan, setSelectedLoan] = useState("Personal Loan");
+
+  useEffect(() => {
+    const observerCallback = (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("is-revealed");
+        }
+      });
+    };
+
+    const observerOptions = {
+      root: null,
+      rootMargin: "0px 0px -50px 0px",
+      threshold: 0.1,
+    };
+
+    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    const elements = document.querySelectorAll(".reveal-on-scroll");
+    elements.forEach((el) => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
 
   const handleCheckEligibility = (mobileNum) => {
     setUserMobile(mobileNum);

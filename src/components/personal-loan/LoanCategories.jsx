@@ -47,21 +47,21 @@ const LoanCategories = ({ onSelectCategory, onOpenApply }) => {
   return (
     <section className="pl-categories-section" id="loan-categories">
       <Container>
-        <div className="section-header center">
+        <div className="section-header center reveal-on-scroll">
           <span className="section-pill-tag">EXPLORE LOANS</span>
           <h2>Tailored Financial Solutions For Every Need</h2>
           <p>Select a loan category below to get instant quotes, interest rates, and customized offers.</p>
         </div>
 
         <div className="categories-grid">
-          {categories.map((cat) => {
+          {categories.map((cat, idx) => {
             const Icon = cat.icon;
             const isActive = activeCategory === cat.id;
 
             return (
               <div
                 key={cat.id}
-                className={`category-card ${isActive ? "active" : ""} ${cat.popular ? "popular-card" : ""}`}
+                className={`category-card reveal-on-scroll stagger-delay-${idx + 1} ${isActive ? "active" : ""} ${cat.popular ? "popular-card" : ""}`}
                 onClick={() => {
                   setActiveCategory(cat.id);
                   if (onSelectCategory) onSelectCategory(cat);

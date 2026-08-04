@@ -26,7 +26,7 @@ const HowItWorks = () => {
   return (
     <section className="pl-how-it-works" id="how-it-works">
       <Container>
-        <div className="section-header center">
+        <div className="section-header center reveal-on-scroll">
           <span className="section-pill-tag">HOW IT WORKS</span>
           <h2>Simple steps. Quick approval.</h2>
           <p>Get your personal loan sanctioned with zero physical paperwork and transparent digital steps.</p>
@@ -37,7 +37,7 @@ const HowItWorks = () => {
             {steps.map((step, idx) => {
               const Icon = step.icon;
               return (
-                <div key={step.stepNumber} className="step-card-wrapper">
+                <div key={step.stepNumber} className={`step-card-wrapper reveal-on-scroll stagger-delay-${idx + 1}`}>
                   <div className="step-card">
                     <div className="step-number-badge">{step.stepNumber}</div>
                     <div className="step-icon-wrapper">

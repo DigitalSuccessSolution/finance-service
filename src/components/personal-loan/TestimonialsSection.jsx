@@ -43,7 +43,7 @@ const TestimonialsSection = () => {
   return (
     <section className="pl-testimonials-section" id="testimonials">
       <Container>
-        <div className="testimonials-wrapper">
+        <div className="testimonials-wrapper reveal-on-scroll">
           {/* Left Navy Card */}
           <div className="testimonials-stat-card">
             <span className="stat-subtitle">Trusted by</span>

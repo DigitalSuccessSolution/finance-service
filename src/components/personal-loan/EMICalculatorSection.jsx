@@ -33,7 +33,7 @@ const EMICalculatorSection = ({ onApplyWithParams }) => {
   return (
     <section className="pl-emi-section" id="emi-calculator">
       <Container>
-        <div className="emi-outer-card">
+        <div className="emi-outer-card reveal-on-scroll">
           <div className="emi-left-card">
             <div className="emi-card-header">
               <div className="emi-icon-title">
@@ -100,11 +100,6 @@ const EMICalculatorSection = ({ onApplyWithParams }) => {
                 <span>6 Months</span>
                 <span>84 Months</span>
               </div>
-            </div>
-
-            {/* Floating Rupee Coin Emblem */}
-            <div className="rupee-emblem-badge">
-              <IndianRupee size={28} className="rupee-icon" />
             </div>
           </div>
 

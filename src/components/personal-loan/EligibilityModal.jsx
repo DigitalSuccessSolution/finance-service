@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { X, CheckCircle, ArrowRight, ShieldCheck, Sparkles, User, Briefcase, IndianRupee } from "lucide-react";
+import { X, CheckCircle, ArrowRight, ShieldCheck, User, Briefcase, IndianRupee } from "lucide-react";
 
 const EligibilityModal = ({ isOpen, onClose, initialMobile = "", initialLoanType = "Personal Loan" }) => {
   const [step, setStep] = useState(1);
@@ -150,7 +150,7 @@ const EligibilityModal = ({ isOpen, onClose, initialMobile = "", initialLoanType
               ) : (
                 <>
                   <span>Check Approved Offer</span>
-                  <Sparkles size={18} />
+                  <ArrowRight size={18} />
                 </>
               )}
             </button>

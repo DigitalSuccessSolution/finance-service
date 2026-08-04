@@ -1,11 +1,11 @@
-import { ArrowRight, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowRight, ShieldCheck, CheckCircle2 } from "lucide-react";
 import Container from "../common/Container";
 
 const CTABanner = ({ onOpenApply }) => {
   return (
     <section className="pl-cta-banner-section">
       <Container>
-        <div className="cta-banner-card">
+        <div className="cta-banner-card reveal-on-scroll">
           <div className="cta-banner-content">
             <h2>Ready to take the next step?</h2>
             <p>
@@ -21,14 +21,14 @@ const CTABanner = ({ onOpenApply }) => {
 
             <div className="cta-mini-features">
               <span><ShieldCheck size={16} /> 100% Data Confidential</span>
-              <span><Sparkles size={16} /> Instant Sanction Letter</span>
+              <span><CheckCircle2 size={16} /> Instant Sanction Letter</span>
             </div>
           </div>
 
           <div className="cta-banner-mockup">
             <div className="mockup-img-frame">
               <img
-                src="/images/phone_app_mockup.png"
+                src="/images/phone-mockup.png"
                 alt="Janki Financial Mobile App Preview"
                 className="phone-mockup-img"
               />

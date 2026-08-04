@@ -28,7 +28,7 @@ const WhyChooseJanki = () => {
   return (
     <section className="pl-why-choose-us" id="why-choose-us">
       <Container>
-        <div className="section-header center">
+        <div className="section-header center reveal-on-scroll">
           <span className="section-pill-tag">WHY CHOOSE JANKI</span>
           <h2>Experience the Janki Advantage</h2>
           <p>We partner with top-tier Indian banks and NBFCs to bring you unmatched interest rates and seamless loans.</p>
@@ -38,7 +38,7 @@ const WhyChooseJanki = () => {
           {features.map((feat, idx) => {
             const Icon = feat.icon;
             return (
-              <div key={feat.title} className="why-card">
+              <div key={feat.title} className={`why-card reveal-on-scroll stagger-delay-${idx + 1}`}>
                 <div className="why-icon-box">
                   <Icon size={24} className="why-icon" />
                 </div>

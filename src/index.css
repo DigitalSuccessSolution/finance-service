@@ -2,7 +2,7 @@
 
 :root{
   --primary:#153B69;
-  --secondary:#C89B3C;
+  --secondary:rgba(176, 136, 56, 0.85);
   --background:#F8F9FB;
   --white:#FFFFFF;
   --heading:#1F2937;

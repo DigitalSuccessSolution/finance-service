@@ -46,13 +46,13 @@ const FAQSection = () => {
   return (
     <section className="pl-faq-section" id="faq">
       <Container>
-        <div className="section-header center">
+        <div className="section-header center reveal-on-scroll">
           <span className="section-pill-tag">FREQUENTLY ASKED QUESTIONS</span>
           <h2>Frequently Asked Questions</h2>
           <p>Got questions about loan eligibility, documentation, or disbursal? We've got answers.</p>
         </div>
 
-        <div className="faq-accordion-wrapper">
+        <div className="faq-accordion-wrapper reveal-on-scroll stagger-delay-1">
           {displayedFaqs.map((faq, idx) => {
             const isOpen = activeIdx === idx;
             return (
